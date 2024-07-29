@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1e272e;
+}
+canvas {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: absolute;
+  z-index: 1;
+  margin: 30px;
+  padding: 5px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "t  t"
+    "w  w"
+    "h  h"
+    "b1 b2"
+    "c  c";
+
+  background-color: #1e272e;
+  box-shadow: 0px 0px 20px 2px black;
+}
+.container > * {
+  margin: 5px;
+  text-align: center;
+  font-family: Consolas, "Courier New", monospace;
+}
+.title {
+  grid-area: t;
+  color: white;
+  font-size: 2em;
+  font-weight: 900;
+}
+.w {
+  grid-area: w;
+  color: white;
+  font-size: 20px;
+}
+.h {
+  grid-area: h;
+  color: white;
+  font-size: 20px;
+}
+input {
+  margin: 10px;
+  border: none;
+  padding: 8px;
+  color: white;
+  background: radial-gradient(closest-side, #162027 5%, #0c1114);
+}
+.btn_update,
+.btn_hide {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: #0c1114;
+}
+.btn1 {
+  grid-area: b1;
+  text-align: center;
+}
+.btn2 {
+  grid-area: b2;
+  text-align: center;
+}
+.controller {
+  grid-area: c;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "u u"
+    "l r"
+    "d d";
+}
+.controller > * {
+  margin: 3px;
+}
+.up {
+  grid-area: u;
+}
+.down {
+  grid-area: d;
+}
+.right {
+  grid-area: r;
+}
+.left {
+  grid-area: l;
+}
+.control_btn {
+  color: white;
+  background-color: #0c1114;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 4px;
+}

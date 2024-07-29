@@ -1,0 +1,53 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  position: absolute;
+  z-index: 0;
+}
+button {
+  position: absolute;
+  z-index: 2;
+  margin: 20px;
+  padding: 1em 2em 1em 2em;
+  border: 5px solid #0071db;
+  border-radius: 40px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Bangers", cursive;
+  color: #05147d;
+  background-color: transparent;
+}
+button::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: -10px;
+  top: 0px;
+  background-color: transparent;
+  border: 5px solid #0ce8dc;
+  border-radius: 40px;
+}
+button::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: -10px;
+  background-color: transparent;
+  border: 5px solid #0401eb;
+  border-radius: 40px;
+}
+button:focus {
+  outline: none;
+}
